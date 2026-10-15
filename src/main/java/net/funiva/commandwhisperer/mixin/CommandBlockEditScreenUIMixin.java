@@ -18,7 +18,7 @@ public class CommandBlockEditScreenUIMixin {
 
     @Shadow @Final private CommandBlockEntity autoCommandBlock;
 
-    @Inject(method = "init", at = @At("TAIL"))
+    @Inject(method = "init()V", at = @At("TAIL"))
     private void addCustomControls(CallbackInfo ci) {
         CommandBlockEditScreen screen = (CommandBlockEditScreen)(Object)this;
         ScreenAccessor accessor = (ScreenAccessor)(Object)this;
